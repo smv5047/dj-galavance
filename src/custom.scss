@@ -1,0 +1,29 @@
+// change the theme
+$theme-colors: (
+  "primary": #fa9641,
+  "danger": #ff4136
+);
+$btn-color: #ff4136;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+.jumbotron {
+  padding: 24rem 12rem;
+  background-image: url("https://images.unsplash.com/photo-1544785349-c4a5301826fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  color: #fa9641;
+}
+
+h1.display-2 {
+  padding-bottom: 4rem;
+}
