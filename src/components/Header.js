@@ -2,7 +2,6 @@ import React from "react";
 import { Jumbotron, Button } from "reactstrap";
 
 function Header() {
-  //ToDo - Update click handlers
   const handleClick = () => {};
 
   return (
