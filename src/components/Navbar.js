@@ -26,7 +26,12 @@ const MainNavbar = props => {
         {/* <NavbarToggler onClick={toggle} /> */}
         <NavLink href="/">About</NavLink>
         <NavLink href="/">Book</NavLink>
-        <NavLink href="/">Music</NavLink>
+        <NavLink
+          target="_blank"
+          href="https://www.mixcloud.com/galavance/uploads/"
+        >
+          Music
+        </NavLink>
         <NavLink href="/">Testamonials</NavLink>
       </Navbar>
     </div>
