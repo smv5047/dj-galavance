@@ -2,7 +2,11 @@ import React from "react";
 import { Jumbotron, Button } from "reactstrap";
 
 function Header() {
-  const handleClick = () => {};
+  const handleClick = e => {
+    e.preventDefault();
+    window.open("http://www.galavance.com/book");
+    console.log("hello");
+  };
 
   return (
     <>
