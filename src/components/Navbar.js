@@ -18,6 +18,7 @@ const MainNavbar = props => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  //TODO set toggle
 
   return (
     <div>
