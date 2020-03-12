@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Mainnavbar />
       <Header />
+      <ContactForm />
     </div>
   );
 }
