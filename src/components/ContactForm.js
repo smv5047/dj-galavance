@@ -2,6 +2,25 @@ import React, { useState } from "react";
 import { withFormik, Form, Field, yupToFormErrors } from "formik";
 import { Button, FormGroup, Label, Input, FormText } from "reactstrap";
 import * as yup from "yup";
+import emailjs from "emailjs-com";
+
+function sendEmail(event) {
+  emailjs
+    .send(
+      "default_service",
+      "contact_form",
+      event,
+      "user_vIIopcCRB96XoW3SlCx8P"
+    )
+    .then(
+      result => {
+        console.log(result.text);
+      },
+      error => {
+        console.log(error.text);
+      }
+    );
+}
 
 function ContactForm() {
   //TODO onChange, onSubmit, States
@@ -23,7 +42,7 @@ function ContactForm() {
           <option value="other">Other</option>
         </Field>
         <FormText color="muted">Please enter any event details below.</FormText>
-        <Input type="textarea" name="text" id="exampleText" />
+        <Input type="textarea" name="event_details" id="exampleText" />
         <Button type="submit">Submit</Button>
       </Form>
     </div>
@@ -35,14 +54,23 @@ export default withFormik({
     return {
       first_name: values.first_name || "John",
       last_name: values.last_name || "Doe",
-      email: values.email || "John.Doe@gmail.com"
+      email: values.email || "John.Doe@gmail.com",
+      event_type: values.event_type || "Wedding",
+      event_details: values.event_details || "N/A"
     };
   },
 
   validationSchema: yup.object().shape({
-    first_name: yup.string(),
-    last_name: yup.string()
-    // email: yup.email()
-  })
-  //onSubmit
+    first_name: yup.string().required(),
+    last_name: yup.string().required(),
+    email: yup
+      .string()
+      .email()
+      .required(),
+    event_type: yup.string().required(),
+    event_details: yup.string().required()
+  }),
+  handleSubmit: (values, { setStatus }) => {
+    sendEmail(values);
+  }
 })(ContactForm);
