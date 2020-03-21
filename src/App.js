@@ -4,7 +4,6 @@ import Mainnavbar from "./components/Navbar";
 import Header from "./components/Header";
 import ContactForm from "./components/ContactForm";
 
-//Add routes
 function App() {
   return (
     <div className="App">
