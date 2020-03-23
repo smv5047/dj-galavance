@@ -6,12 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavLink
 } from "reactstrap";
 
 const MainNavbar = props => {
@@ -33,7 +28,7 @@ const MainNavbar = props => {
         >
           Music
         </NavLink>
-        {/* <NavLink href="/">Testamonials</NavLink> */}
+        <NavLink href="/">Testamonials</NavLink>
       </Navbar>
     </div>
   );

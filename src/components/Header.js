@@ -1,21 +1,20 @@
 import React from "react";
 import { Jumbotron, Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function Header() {
-  const handleClick = e => {
-    e.preventDefault();
-    window.open("http://www.galavance.com/book");
-    console.log("hello");
-  };
-
   return (
     <>
-      <Jumbotron>
-        <h1 className="display-2"> DJ Galavance </h1>
+      <Jumbotron className="header">
+        <div className="cta">
+          <h1 className="display-1"> DJ Galavance </h1>
 
-        <Button color="primary" onClick={handleClick}>
-          Press to Party!
-        </Button>
+          <Button color="primary">
+            <Link to="/contact" className="link">
+              Press to Party!
+            </Link>
+          </Button>
+        </div>
       </Jumbotron>
     </>
   );

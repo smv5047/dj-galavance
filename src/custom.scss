@@ -27,3 +27,48 @@ body {
 h1.display-2 {
   padding-bottom: 4rem;
 }
+
+a.link {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1800px;
+  padding: 0;
+}
+
+.form-container {
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  justify-content: center;
+  border-radius: 5%;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.display-1 {
+  margin-top: 3rem;
+}
+
+.cta {
+  position: absolute;
+  top: 15rem;
+  text-align: center;
+}
+
+.btn {
+  text-decoration: none;
+  &:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+  }
+}

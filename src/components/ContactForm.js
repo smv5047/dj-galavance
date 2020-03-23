@@ -26,7 +26,7 @@ function ContactForm() {
   //TODO onChange, onSubmit, States
 
   return (
-    <div>
+    <div className="form-container">
       <Form>
         <Field type="text" name="first_name" placeholder="John" />
         <Field type="text" name="last_name" placeholder="Doe" />
