@@ -7,7 +7,8 @@ function Header() {
     <>
       <Jumbotron className="header">
         <div className="cta">
-          <h1 className="display-1"> DJ Galavance </h1>
+          <span className="title">cta</span>
+          <h1 className="display-1">DJ Galavance</h1>
 
           <Button color="primary">
             <Link to="/contact" className="link">
