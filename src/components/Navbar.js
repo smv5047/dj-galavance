@@ -6,10 +6,11 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
-const MainNavbar = props => {
+const MainNavbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -19,9 +20,11 @@ const MainNavbar = props => {
     <div>
       <Navbar color="dark" light expand="md">
         <NavbarBrand href="/">DJ Galavance</NavbarBrand>
-        {/* <NavbarToggler onClick={toggle} /> */}
+        <NavbarToggler onClick={toggle} />
         <NavLink href="http://www.galavance.com/bio-galavance">About</NavLink>
-        <NavLink href="http://www.galavance.com/book">Book</NavLink>
+        <Link to="/contact" className="link">
+          Book
+        </Link>
         <NavLink
           target="_blank"
           href="https://www.mixcloud.com/galavance/uploads/"

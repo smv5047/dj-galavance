@@ -18,6 +18,9 @@ $btn-color: #ff4136;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  display: flex;
+  justify-content: center;
 }
 
 body {
@@ -68,6 +71,7 @@ a.link {
 
 .btn {
   text-decoration: none;
+  margin: 0 auto;
   &:hover {
     transition: 0.5s;
     transform: scale(1.2);
@@ -78,4 +82,21 @@ a.link {
   position: absolute;
   top: 1px;
   left: 1px;
+}
+
+//Booking Form
+form {
+  width: 35%;
+}
+
+form input {
+  margin: 1rem 1rem;
+}
+
+form select {
+  margin: 1rem 1rem;
+}
+
+form select {
+  margin: 1rem 1rem;
 }
