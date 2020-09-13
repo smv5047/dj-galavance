@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  Collapse,
+  // Collapse,
   Navbar,
-  NavbarToggler,
+  // NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
+  // Nav,
+  // NavItem,
+  // NavLink
 } from "reactstrap";
 
 export default function Footer() {

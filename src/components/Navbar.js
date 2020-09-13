@@ -1,28 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import {
-  Collapse,
+  // Collapse,
   Navbar,
-  NavbarToggler,
+  // NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
+  // Nav,
+  // NavItem,
   NavLink,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+// import About from "./About";
 
 const MainNavbar = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  // const toggle = () => setIsOpen(!isOpen);
   //TODO set toggle
 
   return (
     <div>
       <Navbar color="dark" light expand="md">
         <NavbarBrand href="/">DJ Galavance</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <NavLink href="http://www.galavance.com/bio-galavance">About</NavLink>
-        <Link to="/contact" className="link">
+
+        <NavLink href="https://www.facebook.com/DJGalavance/about/">
+          About
+        </NavLink>
+        {/* <Link to="/about" className="link">
+          Bio
+        </Link> */}
+        <Link to="/contact" className="link book">
           Book
         </Link>
         <NavLink
@@ -31,7 +37,8 @@ const MainNavbar = (props) => {
         >
           Music
         </NavLink>
-        <NavLink href="/">Testamonials</NavLink>
+        {/* <NavLink href="/">Testamonials</NavLink> */}
+        {/* <NavbarToggler onClick={toggle} /> */}
       </Navbar>
     </div>
   );

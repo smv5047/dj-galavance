@@ -1,13 +1,6 @@
-import React, { useState } from "react";
-import { withFormik, Form, Field, yupToFormErrors } from "formik";
-import {
-  Jumbotron,
-  Button,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-} from "reactstrap";
+import React from "react";
+import { withFormik, Form, Field } from "formik";
+import { Jumbotron, Button, Label, Input, FormText } from "reactstrap";
 import * as yup from "yup";
 import emailjs from "emailjs-com";
 
@@ -36,9 +29,18 @@ function ContactForm() {
     <div className="form-container">
       <Jumbotron className="contact-form">
         <Form>
+          <Label className="first-label">First Name</Label>
           <Field type="text" name="first_name" placeholder="John" />
-          <Field type="text" name="last_name" placeholder="Doe" />
-          <Field type="email" name="email" placeholder="John.Doe@gmail.com" />
+
+          <Label>
+            Last Name
+            <Field type="text" name="last_name" placeholder="Doe" />
+          </Label>
+          <Label>
+            Email
+            <Field type="email" name="email" placeholder="John.Doe@gmail.com" />
+          </Label>
+          <Label>Event Type</Label>
           <Field component="select" name="event_type">
             <option value="" disabled>
               Select Event Type:
@@ -49,11 +51,12 @@ function ContactForm() {
             <option value="club_or_bar">Club or Bar</option>
             <option value="other">Other</option>
           </Field>
-          <FormText color="muted">
-            Please enter any event details below.
-          </FormText>
+
+          <FormText>Please enter any event details below:</FormText>
           <Input type="textarea" name="event_details" id="exampleText" />
-          <Button type="submit">Submit</Button>
+          <Button type="submit" className="submit-btn">
+            Submit
+          </Button>
         </Form>
       </Jumbotron>
     </div>
