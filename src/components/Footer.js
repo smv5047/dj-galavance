@@ -13,7 +13,9 @@ export default function Footer() {
   return (
     <div className="footer">
       <Navbar color="dark" light expand="md">
-        <NavbarBrand href="/">DJ Galavance</NavbarBrand>
+        <NavbarBrand href="/" className="footer-center">
+          DJ Galavance
+        </NavbarBrand>
         {/* <NavbarToggler onClick={toggle} />
         <NavLink href="http://www.galavance.com/bio-galavance">About</NavLink>
         <NavLink href="http://www.galavance.com/book">Book</NavLink>
