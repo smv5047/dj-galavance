@@ -14,8 +14,8 @@ function App() {
         <Route path="/" component={Mainnavbar} />
         <Route exact path="/" component={Header} />
         <Route exact path="/contact" component={ContactForm} />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

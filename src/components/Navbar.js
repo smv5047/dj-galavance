@@ -3,7 +3,7 @@ import {
   // Collapse,
   Navbar,
   // NavbarToggler,
-  NavbarBrand,
+  // NavbarBrand,
   // Nav,
   // NavItem,
   NavLink,
@@ -20,23 +20,32 @@ const MainNavbar = (props) => {
   return (
     <div>
       <Navbar color="dark" light expand="md">
-        <NavbarBrand href="/">DJ Galavance</NavbarBrand>
-
-        <NavLink href="https://www.facebook.com/DJGalavance/about/">
+        <NavLink
+          target="_blank"
+          href="https://www.facebook.com/DJGalavance/about/"
+        >
           About
+        </NavLink>
+        <NavLink
+          target="_blank"
+          href="https://www.thumbtack.com/profile/services/i2W6eJGi7p5XoA/reviews"
+        >
+          Reviews
         </NavLink>
         {/* <Link to="/about" className="link">
           Bio
         </Link> */}
-        <Link to="/contact" className="link book">
-          Book
-        </Link>
+        {/* <NavbarBrand href="/">DJ Galavance</NavbarBrand> */}
+
         <NavLink
           target="_blank"
           href="https://www.mixcloud.com/galavance/uploads/"
         >
-          Music
+          Mixes
         </NavLink>
+        <Link to="/contact" className="link book">
+          Book
+        </Link>
         {/* <NavLink href="/">Testamonials</NavLink> */}
         {/* <NavbarToggler onClick={toggle} /> */}
       </Navbar>
